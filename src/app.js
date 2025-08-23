@@ -6,11 +6,6 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = function () {
-  // Boton de reload page
-  const reload = document.getElementById("reload");
-  reload.addEventListener("click", (_) => {
-    location.reload();
-  });
   //write your code here
   
   let pronoun = ['the', 'our', 'we', 'their', 'our']
@@ -29,7 +24,7 @@ window.onload = function () {
     }
   }
 
-  document.querySelector("#domain").innerHTML = domainNames[Math.floor(Math.random() * domainNames.length)]
+  document.querySelector("#domain").innerHTML = `<ul>${domainNames.map((domainName) => `<li>${domainName}</li>`).join(" ")}</ul>`
 };
 
   // if ((noun[nounIndex]).slice(2) == dot[dotIndex]) {
